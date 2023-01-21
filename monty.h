@@ -12,14 +12,15 @@
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
+ *
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO Holberton project
  */
 typedef struct stack_s
 {
-		int n;
-		struct stack_s *prev;
-		struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 /**
  * struct bus_s - variables -args, file, line content
@@ -41,6 +42,7 @@ extern bus_t bus;
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
+ *
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
@@ -55,7 +57,7 @@ char  *clean_line(char *content);
 void f_push(stack_t **head, unsigned int number);
 void f_pall(stack_t **head, unsigned int number);
 void f_pint(stack_t **head, unsigned int number);
-int execute(char *content, stack_t **head, unsigned int counter, FILE *file)
+int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 void free_stack(stack_t *head);
 void f_pop(stack_t **head, unsigned int counter);
 void f_swap(stack_t **head, unsigned int counter);
@@ -73,5 +75,4 @@ void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
 void f_queue(stack_t **head, unsigned int counter);
 void f_stack(stack_t **head, unsigned int counter);
-
-#endif /* MONTY_H */
+#endif
